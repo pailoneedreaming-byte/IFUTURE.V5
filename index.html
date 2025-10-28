@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="animated-bg"></div>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html" class="active">Work</a></li>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="casual.html">Casual</a></li>
+      <li><a href="ai.html">AI Assistant</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="top-bar">
+    <div class="burger" onclick="toggleSidebar()">☰</div>
+    <div class="user-section">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User" class="avatar">
+      <span class="welcome-text">Welcome back</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content">
+    <div class="grid">
+      <div class="box">Email <span class="pill">3</span></div>
+      <div class="box">Projects <span class="pill">1</span></div>
+      <div class="box">Requests <span class="pill">2</span></div>
+      <div class="box">Contacts <span class="pill">5</span></div>
+    </div>
+  </main>
+
+  <!-- News Box -->
+  <div class="news-box" id="newsBox" onclick="toggleNews()">
+    <h3>News</h3>
+    <p>Click to expand for more updates...</p>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="toggleNews()"></div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+    function toggleNews() {
+      document.getElementById("newsBox").classList.toggle("expanded");
+      document.getElementById("overlay").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
